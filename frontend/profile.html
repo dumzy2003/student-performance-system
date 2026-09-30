@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile | Student Portal</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+
+        <img src="student-head-svgrepo-com (2).svg" alt="" width="50" height="50">
+
+        <div>
+            <strong>Student Portal</strong>
+            <small>Academic System</small>
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <span class="nav-label">MAIN MENU</span>
+
+        <a href="dashboard.html" class="nav-link">
+            <i data-lucide="layout-dashboard"></i>
+            Dashboard
+        </a>
+
+        <a href="profile.html" class="nav-link active">
+            <i data-lucide="user"></i>
+            Profile
+        </a>
+
+        <a href="courses.html" class="nav-link">
+            <i data-lucide="book-open"></i>
+            Courses
+        </a>
+
+        <a href="results.html" class="nav-link">
+            <i data-lucide="file-text"></i>
+            Results
+        </a>
+
+        <a href="attendance.html" class="nav-link">
+            <i data-lucide="calendar-check"></i>
+            Attendance
+        </a>
+
+
+        <span class="nav-label">ACCOUNT</span>
+
+        <a href="settings.html" class="nav-link">
+            <i data-lucide="settings"></i>
+            Settings
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="sidebar-user">
+
+            <div class="avatar" >UO</div>
+
+            <div>
+                <h5 id="sidebarProfileName">Loading...</h5>
+                <span id="sidebarProfileDepartment">Loading...</span>
+            </div>
+
+        </div>
+
+        <a href="#" class="logout-link" onclick="logoutStudent()">
+    <i data-lucide="log-out"></i>
+    Logout
+</a>
+
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+
+<header class="topbar">
+
+    <button
+        class="mobile-menu"
+        id="menuButton"
+    >
+        <i data-lucide="menu"></i>
+    </button>
+
+    <div>
+
+        <span class="page-eyebrow">
+            STUDENT PORTAL
+        </span>
+
+        <h2>Profile</h2>
+
+    </div>
+
+</header>
+
+
+<div class="page-content">
+
+
+<section class="page-intro">
+
+    <div>
+
+        <span class="eyebrow">
+            PERSONAL INFORMATION
+        </span>
+
+        <h1>
+            Student profile
+        </h1>
+
+        <p>
+            View your personal and academic information.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="profile-grid">
+
+
+<div class="panel profile-card">
+
+    <div class="profile-avatar-wrap">
+
+        <div
+            class="profile-avatar"
+            id="profileAvatar"
+        >UO</div>
+
+    </div>
+
+    <h2 id="profileName">Loading...</h2>
+
+    <span id="profileDepartment">Loading...</span>
+
+    <span class="profile-status">
+        Active Student
+    </span>
+
+</div>
+
+
+<div class="panel">
+
+    <div class="panel-header">
+
+        <div>
+
+            <span class="eyebrow">
+                STUDENT DETAILS
+            </span>
+
+            <h3>
+                Academic information
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="details-grid">
+
+        <div>
+            <span>Full Name</span>
+            <h2 id="profileDetailName">Loading...</h2>
+        </div>
+
+        <div>
+            <span>Matric Number</span>
+            <span id="profileMatric">Loading...</span>
+        </div>
+
+        <div>
+            <span>Department</span>
+            <span id="profileDetailDepartment">Loading...</span>
+        </div>
+
+        <div>
+            <span>Level</span>
+            <strong id="profileLevel">Loading...</strong>
+        </div>
+
+        <div>
+            <span>Date of Birth</span>
+            <span id="profileDob">Loading...</span>
+        </div>
+
+        <div>
+            <span>Gender</span>
+            <span id="profileGender">Loading...</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+</div>
+
+</main>
+
+</div>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

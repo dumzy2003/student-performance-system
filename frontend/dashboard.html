@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | Student Portal</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <script src="https://unpkg.com/lucide@1.46.0/dist/umd/lucide.min.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+
+            <img src="student-head-svgrepo-com (2).svg" alt="" width="50" height="50">
+
+            <div>
+                <strong>Student Portal</strong>
+                <small>Academic System</small>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <span class="nav-label">
+                MAIN MENU
+            </span>
+
+
+            <a href="dashboard.html" class="nav-link active">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a href="profile.html" class="nav-link">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </a>
+
+
+            <a href="courses.html" class="nav-link">
+                <i data-lucide="book-open"></i>
+                <span>Courses</span>
+            </a>
+
+
+            <a href="results.html" class="nav-link">
+                <i data-lucide="file-text"></i>
+                <span>Results</span>
+            </a>
+
+
+            <a href="attendance.html" class="nav-link">
+                <i data-lucide="calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+
+            <span class="nav-label">
+                ACCOUNT
+            </span>
+
+
+            <a href="settings.html" class="nav-link">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="topbar-avatar">
+                    UO
+                </div>
+
+                <div>
+                    <h5 id="profileName">Loading...</h5>
+                    <span id="profileDepartment">Loading...</span>
+                </div>
+
+            </div>
+
+
+            <a href="#" class="logout-link" onclick="logoutStudent()">
+    <i data-lucide="log-out"></i>
+    Logout
+</a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                class="mobile-menu"
+                id="menuButton"
+            >
+                <i data-lucide="menu"></i>
+            </button>
+
+
+            <div>
+
+                <span class="page-eyebrow">
+                    STUDENT PORTAL
+                </span>
+
+                <h2>Dashboard</h2>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <span class="session">
+                    2025/2026 Academic Session
+                </span>
+
+
+                <div class="topbar-avatar" id="topbarAvatar">UO</div>
+
+            </div>
+
+        </header>
+
+
+        <div class="page-content">
+
+
+            <!-- WELCOME -->
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <span class="eyebrow">
+                        STUDENT OVERVIEW
+                    </span>
+
+                    <h1>
+                        Welcome back, <span id="welcomeUserName">Student</span>.
+                    </h1>
+
+                    <p>
+                        Here's an overview of your academic performance
+                        for the current session.
+                    </p>
+
+                </div>
+
+
+                <a href="results.html" class="primary-button">
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                    View results
+
+                </a>
+
+            </section>
+
+
+            <!-- KPI -->
+
+            <section class="metrics-grid">
+
+
+                <div class="metric-cardd">
+
+                    <div class="metric-topp">
+
+                        <span>CGPA</span>
+
+                        <i data-lucide="award"></i>
+
+                    </div>
+
+                    <strong id="studentCgpa">--</strong>
+
+                    <small>
+                        Cumulative performance
+                    </small>
+
+                </div>
+
+
+                <div class="metric-cardd">
+
+    <div class="metric-topp">
+
+        <span>Average Score</span>
+
+        <i data-lucide="bar-chart-3"></i>
+
+    </div>
+
+    <strong id="averageScore">--</strong>
+
+    <small>
+        Across registered courses
+    </small>
+
+</div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-card">
+
+    <div class="metric-top">
+
+        <span>Attendance</span>
+
+        <i data-lucide="calendar-check"></i>
+
+    </div>
+
+    <strong id="averageAttendance">--</strong>
+
+    <small>
+        Current attendance
+    </small>
+
+</div>
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span>Courses</span>
+
+                        <i data-lucide="book-open"></i>
+
+                    </div>
+
+                    <strong id="courseCount">--</strong>
+
+                    <small>
+                        Registered this semester
+                    </small>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- CONTENT GRID -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- RESULTS -->
+
+                <div class="panel large-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                ACADEMIC PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Recent results
+                            </h3>
+
+                        </div>
+
+
+                        <a href="results.html">
+                            View all
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Course</th>
+
+                                    <th>Credit</th>
+
+                                    <th>Score</th>
+
+                                    <th>Grade</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="resultsTableBody">
+
+    <tr>
+        <td colspan="5">
+            Loading results...
+        </td>
+    </tr>
+
+</tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACADEMIC STATUS -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                STATUS
+                            </span>
+
+                            <h3>
+                                Academic standing
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-box" id="academicStatusBox">
+
+                        <div class="status-icon" id="statusIcon">
+                            <i data-lucide="check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong id="statusTitle">
+                                Good standing
+                            </strong>
+
+                            <p id="statusText">
+                                Your current academic performance
+                                is within the expected range.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-details">
+
+                        <div>
+                            <span>Current level</span>
+                            <strong id="profileLevel">Loading...</strong>
+                        </div>
+
+                        <div>
+                            <span>Department</span>
+                            <span id="profileDepartment">Loading...</span>
+                        </div>
+
+                        <div>
+                            <span>Session</span>
+                            <strong>2025/2026</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ATTENDANCE -->
+
+                <div class="panel attendance-panel" id="attendancePanel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                ATTENDANCE
+                            </span>
+
+                            <h3>
+                                Attendance overview
+                            </h3>
+
+                        </div>
+
+                        <a href="attendance.html">
+                            Details
+                        </a>
+
+                    </div>
+
+
+                    <div class="attendance-score">
+
+                        <strong id="dashboardAttendancePercent">
+                            --
+                        </strong>
+
+                        <span>
+                            Overall attendance
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            id="dashboardAttendanceBar"
+                            style="width:0%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="attendance-meta">
+
+                        <span id="dashboardAttendancePresent">
+                            Present: --
+                        </span>
+
+                        <span id="dashboardAttendanceTarget">
+                            Target: 75%
+                        </span>
+
+                    </div>
+
+
+                    <p class="panel-note" id="dashboardAttendanceNote">
+                        Your attendance is currently being calculated.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

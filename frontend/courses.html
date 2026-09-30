@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Courses | Student Portal</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+
+        <img src="student-head-svgrepo-com (2).svg" alt="" width="50" height="50">
+
+        <div>
+            <strong>Student Portal</strong>
+            <small>Academic System</small>
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <span class="nav-label">MAIN MENU</span>
+
+        <a href="dashboard.html" class="nav-link">
+            <i data-lucide="layout-dashboard"></i>
+            Dashboard
+        </a>
+
+        <a href="profile.html" class="nav-link">
+            <i data-lucide="user"></i>
+            Profile
+        </a>
+
+        <a href="courses.html" class="nav-link active">
+            <i data-lucide="book-open"></i>
+            Courses
+        </a>
+
+        <a href="results.html" class="nav-link">
+            <i data-lucide="file-text"></i>
+            Results
+        </a>
+
+        <a href="attendance.html" class="nav-link">
+            <i data-lucide="calendar-check"></i>
+            Attendance
+        </a>
+
+        <span class="nav-label">ACCOUNT</span>
+
+        <a href="settings.html" class="nav-link">
+            <i data-lucide="settings"></i>
+            Settings
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="sidebar-user">
+
+            <div class="avatar">UO</div>
+
+            <div>
+                <h5 id="profileName">Loading...</h5>
+                <span id="profileDepartment">Loading...</span>
+            </div>
+
+        </div>
+
+                 <a href="#" class="logout-link" onclick="logoutStudent()">
+    <i data-lucide="log-out"></i>
+    Logout
+</a>
+
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+
+<header class="topbar">
+
+    <button
+        class="mobile-menu"
+        id="menuButton"
+    >
+        <i data-lucide="menu"></i>
+    </button>
+
+    <div>
+
+        <span class="page-eyebrow">
+            ACADEMICS
+        </span>
+
+        <h2>Courses</h2>
+
+    </div>
+
+</header>
+
+
+<div class="page-content">
+
+
+<section class="page-intro">
+
+    <div>
+
+        <span class="eyebrow">
+            CURRENT SEMESTER
+        </span>
+
+        <h1>
+            Registered courses
+        </h1>
+
+        <p>
+            Courses registered for the 2025/2026 academic session.
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="panel">
+
+<div class="panel-header">
+
+    <div>
+
+        <span class="eyebrow">
+            COURSE LIST
+        </span>
+
+        <h3>
+            300 Level Courses
+        </h3>
+
+    </div>
+
+    <span class="panel-count">
+        2 Courses
+    </span>
+
+</div>
+
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Course Code</th>
+
+<th>Course Name</th>
+
+<th>Credit Unit</th>
+
+<th>Level</th>
+
+<th>Semester</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="coursesTableBody">
+        <tr>
+            <td colspan="5">
+                Loading courses...
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+</div>
+
+</main>
+
+</div>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
