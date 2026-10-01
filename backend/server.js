@@ -129,6 +129,26 @@ app.get("/api/students/count", (req, res) => {
 
 });
 
+app.get("/api/scores/average", (req, res) => {
+    const sql = `
+        SELECT ROUND(AVG(score), 2) AS average_score
+        FROM scores
+    `;
+
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error("Average score error:", err);
+            return res.status(500).json({
+                error: "Database error"
+            });
+        }
+
+        res.json({
+            average_score: results[0].average_score
+        });
+    });
+});
+
 
 app.get(
     "/api/student/cgpa",
