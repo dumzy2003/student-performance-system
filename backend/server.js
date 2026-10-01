@@ -37,9 +37,9 @@ console.log(
 );
 
 const emailTransporter = nodemailer.createTransport({
-    host: "sandbox.smtp.mailtrap.io",
-    port: 465,
-    secure: true,
+    host: process.env.MAILTRAP_HOST,
+    port: Number(process.env.MAILTRAP_PORT),
+    secure: Number(process.env.MAILTRAP_PORT) === 465,
     auth: {
         user: process.env.MAILTRAP_USER,
         pass: process.env.MAILTRAP_PASSWORD
