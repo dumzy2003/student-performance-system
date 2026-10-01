@@ -1,3 +1,4 @@
+const API_BASE_URL = "https://student-performance-system-production-b81a.up.railway.app";
 document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize Lucide icons
@@ -118,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             try {
                 const response = await fetch(
-                    "http://localhost:5000/api/auth/change-password",
+                    `${API_BASE_URL}/api/auth/change-password`,
                     {
                         method: "POST",
                         headers: {
@@ -192,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             try {
                 const response = await fetch(
-                    "http://localhost:5000/api/student/update-email",
+                    `${API_BASE_URL}/api/student/update-email`,
                     {
                         method: "PUT",
                         headers: {
@@ -257,8 +258,7 @@ async function loadDashboardData() {
         // CGPA
         // =========================
 
-        const cgpaResponse = await fetch(
-            "http://localhost:5000/api/student/cgpa",
+        const cgpaResponse = await fetch(`${API_BASE_URL}/api/student/cgpa`,
             {
                 headers: {
                     "Authorization":
@@ -295,7 +295,7 @@ async function loadDashboardData() {
         // =========================
 
         const scoreResponse = await fetch(
-            "http://localhost:5000/api/student/average-score",
+            `${API_BASE_URL}/api/student/average-score`,
             {
                 headers: {
                     "Authorization":
@@ -325,8 +325,7 @@ async function loadDashboardData() {
         // =========================
 
         const attendanceResponse =
-            await fetch(
-                "http://localhost:5000/api/student/attendance",
+            await fetch(`${API_BASE_URL}/api/student/attendance`,
                 {
                     headers: {
                         "Authorization":
@@ -427,7 +426,7 @@ async function loadDashboardData() {
 
         const courseCountResponse =
         await fetch(
-            "http://localhost:5000/api/student/course-count",
+            `${API_BASE_URL}/api/student/course-count`,
             {
                 headers: {
                     "Authorization":
@@ -470,7 +469,7 @@ async function loadStudentCourses() {
         }
 
         const response = await fetch(
-            "http://localhost:5000/api/student/courses",
+            `${API_BASE_URL}/api/student/courses`,
             {
                 headers: {
                     "Authorization":
@@ -596,8 +595,7 @@ async function loadStudentResults() {
             return;
         }
 
-        const response = await fetch(
-            "http://localhost:5000/api/student/results",
+        const response = await fetch(`${API_BASE_URL}/api/student/results`,
             {
                 headers: {
                     "Authorization":
@@ -800,8 +798,7 @@ async function loadStudentAttendanceRecords() {
 
     try {
 
-        const response = await fetch(
-            "http://localhost:5000/api/student/attendance-records",
+        const response = await fetch(`${API_BASE_URL}/api/student/attendance-records`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -918,7 +915,7 @@ async function loadStudentProfile() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/auth/me",
+            `${API_BASE_URL}/api/auth/me`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -1070,29 +1067,7 @@ async function loadStudentProfile() {
 // COURSE COUNT
 // =========================
 
-// const courseCountResponse =
-//     await fetch(
-//         "http://localhost:5000/api/student/course-count",
-//         {
-//             headers: {
-//                 "Authorization":
-//                     `Bearer ${token}`
-//             }
-//         }
-//     );
 
-// const courseCountData =
-//     await courseCountResponse.json();
-
-// const courseCountElement =
-//     document.getElementById("courseCount");
-
-// if (courseCountElement) {
-
-//     courseCountElement.textContent =
-//         courseCountData.course_count ?? "--";
-
-// }
 
 function showSettingsToast(message, type = "success") {
     const toast = document.getElementById("settingsToast");

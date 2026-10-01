@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
 
                 const response = await fetch(
-                    "http://localhost:5000/api/auth/change-password",
+                    "https://student-performance-system-production-b81a.up.railway.app/api/auth/change-password",
                     {
                         method: "POST",
 

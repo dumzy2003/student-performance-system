@@ -71,7 +71,7 @@ document.addEventListener(
 
                     const response =
                         await fetch(
-                            "http://localhost:5000/api/auth/forgot-password",
+                            "https://student-performance-system-production-b81a.up.railway.app/api/auth/forgot-password",
                             {
                                 method: "POST",
 

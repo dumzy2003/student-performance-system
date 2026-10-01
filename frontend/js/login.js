@@ -40,7 +40,7 @@ loginForm.addEventListener(
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/login",
+                "https://student-performance-system-production-b81a.up.railway.app/api/auth/login",
                 {
                     method: "POST",
 
