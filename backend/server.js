@@ -1276,8 +1276,7 @@ app.post(
                             });
                         }
 
-                        const resetLink =
-    `http://127.0.0.1:5500/frontend/reset-password.html?token=${resetToken}`;
+                        const resetLink = `https://student-performance-system-frontend.vercel.app/reset-password.html?token=${resetToken}`;
     console.log("Reset link:", resetLink);
 
                         try {
